@@ -21,7 +21,7 @@ def handle_nan(data):
         return [handle_nan(item) for item in data]
     elif isinstance(data, dict):
         return {k: handle_nan(v) for k, v in data.items()}
-    elif isinstance(data, float) and (data != data):  # Check for NaN
+    elif isinstance(data, float) and (data != data):  
         return None
     else:
         return data
@@ -29,7 +29,7 @@ def handle_nan(data):
 def perform_eda(df):
     # Basic info
     info = df.info()
-    description = df.describe(include='all')  # Include all types for description
+    description = df.describe(include='all')  
     missing_values = df.isnull().sum()
 
     # Distribution of the target variable

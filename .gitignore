@@ -15,8 +15,6 @@ env/
 .vscode/
 .idea/
 
-# Ignore data files (if not needed in version control)
-data/
 
 # Ignore logs
 *.log
